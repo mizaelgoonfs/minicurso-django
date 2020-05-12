@@ -1,0 +1,75 @@
+Microsoft Windows [versão 10.0.18363.778]
+(c) 2019 Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>python -m venv env
+
+C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>env\Scripts\activate
+
+(env) C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>deactivate
+C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>env\Scripts\activate
+
+(env) C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>pip install django
+Collecting django
+  Downloading https://files.pythonhosted.org/packages/a9/4f/8a247eee2958529a6a805d38fbacd9764fd566462fa0016aa2a2947ab2a6/Django-3.0.5-py3-none-any.whl (7.5MB)
+    100% |████████████████████████████████| 7.5MB 1.4MB/s
+Collecting pytz (from django)
+  Downloading https://files.pythonhosted.org/packages/4f/a4/879454d49688e2fad93e59d7d4efda580b783c745fd2ec2a3adf87b0808d/pytz-2020.1-py2.py3-none-any.whl (510kB)
+    100% |████████████████████████████████| 512kB 3.6MB/s
+Collecting asgiref~=3.2 (from django)
+  Downloading https://files.pythonhosted.org/packages/68/00/25013f7310a56d17e1ab6fd885d5c1f216b7123b550d295c93f8e29d372a/asgiref-3.2.7-py2.py3-none-any.whl
+Collecting sqlparse>=0.2.2 (from django)
+  Downloading https://files.pythonhosted.org/packages/85/ee/6e821932f413a5c4b76be9c5936e313e4fc626b33f16e027866e1d60f588/sqlparse-0.3.1-py2.py3-none-any.whl (40kB)
+    100% |████████████████████████████████| 40kB 2.6MB/s
+Installing collected packages: pytz, asgiref, sqlparse, django
+Successfully installed asgiref-3.2.7 django-3.0.5 pytz-2020.1 sqlparse-0.3.1
+You are using pip version 19.0.3, however version 20.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(env) C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>python -m pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/54/2e/df11ea7e23e7e761d484ed3740285a34e38548cf2bad2bed3dd5768ec8b9/pip-20.1-py2.py3-none-any.whl (1.5MB)
+    100% |████████████████████████████████| 1.5MB 3.3MB/s
+Installing collected packages: pip
+  Found existing installation: pip 19.0.3
+    Uninstalling pip-19.0.3:
+      Successfully uninstalled pip-19.0.3
+Successfully installed pip-20.1
+
+(env) C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>pip freeze
+asgiref==3.2.7
+Django==3.0.5
+pytz==2020.1
+sqlparse==0.3.1
+
+(env) C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>django-admin startproject blog
+
+(env) C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django>cd blog
+
+(env) C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django\blog>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 02, 2020 - 01:01:54
+Django version 3.0.5, using settings 'blog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[02/May/2020 01:03:18] "GET / HTTP/1.1" 200 16351
+[02/May/2020 01:03:18] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[02/May/2020 01:03:19] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[02/May/2020 01:03:19] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[02/May/2020 01:03:19] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[02/May/2020 01:03:19] "GET /favicon.ico HTTP/1.1" 404 1970
+
+(env) C:\Users\MIZAELGOON-PC\Desktop\InstaPy\minicurso-django\blog>
+
+env\Scripts\activate
+python manage.py runserver
+python manage.py createsuperuser
+python manage.py startapp core
+python manage.py makemigrations
+python manage.py migrate

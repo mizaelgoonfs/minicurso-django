@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+</head>
+<body>
+    <section class="hero is-link is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-centered">
+              Bem-vindo ao meu blog :)
+            </h1>
+            <h2 class="subtitle has-text-centered">
+              Blog criado em minicurso de introdução ao backend com Django
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {% block content %}
+      {% endblock %}
+
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p class="has-text-white">
+            <strong class="has-text-white">Meu Blog</strong> by <a href="https://instagram.com/mizaelgoonfs">MizaelGoon</a>.
+          </p>
+        </div>
+      </footer>
+</body>
+</html>
