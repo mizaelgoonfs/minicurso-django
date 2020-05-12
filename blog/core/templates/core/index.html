@@ -1,14 +1,24 @@
 {% extends './base.html' %}
 
 {% block content %}
+{% if post_list %}
+    {% for post in post_list %}
+        <section class="section">
+            <div class="container">
+                <h1 class="title"><a href="{% url 'core:detail' post.slug %}">{{ post.title }}</a></h1>
+                <h2 class="subtitle">
+                    {{ post.resume }}
+                </h2>
+            </div>
+        </section>
+    {% endfor %}
+{% else %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Não há posts cadastrados!</h1>
+        </div>
+    </section>
+{% endif %}
 
-<section class="section">
-    <div class="container">
-        <h1 class="title">Section</h1>
-        <h2 class="subtitle">
-            A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-        </h2>
-    </div>
-</section>
 
 {% endblock %}
